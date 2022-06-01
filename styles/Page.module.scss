@@ -1,0 +1,131 @@
+.main {
+  flex: 1 0 auto;
+}
+.responsiveMenu{
+  display: none;
+  position: fixed;
+  margin-top: 79px;
+  width: 85%;
+  left: 0;
+  height: 100%;
+  z-index: 4;
+  background-color: #F2F2F2;
+  animation-name: responsiveMenuAnim;
+  animation-duration: 0.5s;
+}
+.responsiveMenuBack{
+  display: none;
+  position: fixed;
+  margin-top: 79px;
+  width: 85%;
+  left: -85%;
+  height: 100%;
+  z-index: 4;
+  background-color: #F2F2F2;
+  animation-name: responsiveMenuAnim2;
+  animation-duration: 0.5s;
+}
+.resAuth{
+  width: 100%;
+  padding: 10px;
+  background-color: #525252;
+  display: flex;
+  align-items: center;
+
+  .userAvatar{
+    background-color: #fff;
+    width: max-content;
+    border-radius: 50%;
+    height: max-content;
+  }
+  .authLinks{
+    padding-left: 18px;
+    a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    a:nth-child(1){
+      padding-right: 8px;
+      border-right: 1px solid #fff;
+    }
+    a:nth-child(2){
+      padding-left: 8px;
+    }
+  }
+}
+.resMenuLinks{
+  display: flex;
+  flex-direction: column;
+
+  a{
+    color: #000;
+    border-bottom: .5px solid #E7E7E7;
+    padding: 10px;
+  }
+}
+@keyframes responsiveMenuAnim {
+  from{left: -85%;}
+  to{left: 0;}
+}
+@keyframes responsiveMenuAnim2 {
+  from{left: 0;}
+  to{left: -85%}
+}
+.hamburgerMain{
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 5px;
+  width: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  z-index: 3;
+}
+.hamburger .line{
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+.line2{
+  opacity: 0;
+}
+
+.line1{
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+.line3{
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+@media screen and (max-width: 550px) {
+  .hamburgerMain{
+    display: block;
+  }
+  .main{
+    margin-top: 50px;
+  }
+  .responsiveMenu{
+    display: block;
+  }
+  .responsiveMenuBack{
+    display: block;
+  }
+}
+

@@ -1,0 +1,20 @@
+.flex {
+  display: flex;
+}
+.right{
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .flex {
+    display: flex;
+  }
+}
+@media screen and (max-width: 550px) {
+  .flex {
+    display: block;
+  }
+  .right{
+    margin-left: 0;
+  }
+}

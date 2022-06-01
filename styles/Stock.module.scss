@@ -1,0 +1,20 @@
+.stockSec{
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+
+.stockSec__item{
+  min-width: 20%;
+  margin: 1rem;
+  padding: 0.5rem;
+  height: 100px;
+  background-color: red;
+}
+.stockSec__item:first-child{
+  margin-left: 0;
+}
+.stockSec__item:last-child{
+  margin-right: 0;
+}
